@@ -94,8 +94,8 @@ const download = (fileName, blob) => {
   position: relative;
   .btns {
     position: absolute;
-    top: 50%;
-    left: 45%;
+    top: 20%;
+    left: 25%;
   }
 }
 </style>
