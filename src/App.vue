@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div id="video-container">
-      <video id="cameraVideo" autoplay="true"></video>
+      <video id="cameraVideo" :autoplay="true" :playsInline='true' :muted='true'></video>
     </div>
     <div class="btns">
       <button @click="takePhoto">开始</button>
@@ -9,7 +9,7 @@
       <button @click="closePhoto">关闭</button>
     </div>
   </div>
-    <canvas id="canvas" width="320" height="240"></canvas>
+  <canvas id="canvas" width="320" height="240"></canvas>
 </template>
 
 <script setup>
@@ -55,8 +55,8 @@ async function snapPhoto() {
 
 
   // await document.getElementById('video-container').exitFullscreen()
-  
-  
+
+
 }
 
 function closePhoto() {
@@ -90,8 +90,10 @@ const download = (fileName, blob) => {
   padding: 0;
   list-style: none;
 }
+
 .container {
   position: relative;
+
   .btns {
     position: absolute;
     top: 20%;
