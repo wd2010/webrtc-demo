@@ -53,7 +53,7 @@ async function snapPhoto() {
     // download(Date.now().toString() + '.png', file);
   });
 
-
+  closePhoto()
   // await document.getElementById('video-container').exitFullscreen()
 
 
@@ -99,5 +99,9 @@ const download = (fileName, blob) => {
     top: 20%;
     left: 25%;
   }
+}
+
+video {
+  transform: scaleX(-1)
 }
 </style>
