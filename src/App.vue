@@ -3,6 +3,7 @@
     <div id="video-container">
       <video id="cameraVideo" :autoplay="true" :playsInline='true' :muted='true'></video>
     </div>
+
     <div class="btns">
       <button @click="takePhoto">开始</button>
       <button @click="snapPhoto">拍照</button>
@@ -53,8 +54,8 @@ async function snapPhoto() {
     // download(Date.now().toString() + '.png', file);
   });
 
-  closePhoto()
   // await document.getElementById('video-container').exitFullscreen()
+  closePhoto()
 
 
 }
@@ -98,10 +99,15 @@ const download = (fileName, blob) => {
     position: absolute;
     top: 20%;
     left: 25%;
+    z-index:2147483647;
   }
 }
 
 video {
+  transform: scaleX(-1)
+}
+
+canvas {
   transform: scaleX(-1)
 }
 </style>
